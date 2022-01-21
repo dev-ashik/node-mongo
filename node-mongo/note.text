@@ -1,0 +1,39 @@
+npm init
+name: (mongo)
+varsio: enter
+description: enter
+entry point: (index.js) enter
+test command: enter
+git repository: enter
+keywords: enter
+author: ashik
+license: (ISC)
+Is this OK?
+
+
+frame work express js
+https://expressjs.com/en/4x/api.html
+
+
+
+html error
+use cors 
+
+https://expressjs.com/en/resources/middleware/cors.html
+
+into packej.json
+"scripts": {
+    "start": "nodemon index",
+    },
+
+$ npm install cors
+
+npm start
+
+
+
+post man
+postman >> body 
+           raw
+           json
+express boey parser
