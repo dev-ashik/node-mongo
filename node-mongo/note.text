@@ -1,3 +1,5 @@
+*****  first run  *****
+
 npm init
 name: (mongo)
 varsio: enter
@@ -15,11 +17,27 @@ frame work express js
 https://expressjs.com/en/4x/api.html
 
 
+then add code
 
-html error
+const express = require('express');
+const app = express();
+app.get('/fruits/banana', (req, res)=>{
+    res.send("hello world")
+})
+app.listen(3000, ()=> console.log('Listening to port 3000'));
+
+
+run command $ node index.js
+
+
+clint site error  ///  html error
+********* To run auto.... *********
 use cors 
 
 https://expressjs.com/en/resources/middleware/cors.html
+
+var cors = require('cors')
+app.use(cors())
 
 into packej.json
 "scripts": {
@@ -28,7 +46,7 @@ into packej.json
 
 $ npm install cors
 
-npm start
+run command $ nodemon index or npm start
 
 
 
@@ -36,4 +54,15 @@ post man
 postman >> body 
            raw
            json
-express boey parser
+
+in post method req.body is undefined
+console.log(req.body);
+search: express body parser
+http://expressjs.com/en/resources/middleware/body-parser.html
+
+$ npm install body-parser
+$ npm start
+
+use code
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())

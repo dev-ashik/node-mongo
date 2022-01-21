@@ -8,6 +8,8 @@ app.use(bodyParser.json());
 
 const users = ['Asad', 'Moin', 'Sabed', 'Susmita', 'Sohana', 'Sabana'];
 
+
+// get
 // const rootCall = (req, res) => res.send('Thank you very much');
 
 app.get('/', (req, res) => {
@@ -25,15 +27,19 @@ app.get('/fruits/banana', (req, res)=>{
 
 app.get('/users/:id', (req, res)=>{
     // console.log(req.params.id);
-    const id = req.params.id
-    console.log(req.query);  // come from link bar 
-    const name = users[id];
+    const id = req.params.id  // take valu from linkbar as id
+    // console.log(req.query);  // come from link bar 
+    const name = users[id];  // { "id": "0", "name": "Asrafujaman" }
     res.send({id, name});
 })
 
 // post
+// to take data from users
+// to test we can use post man >> body >> raw >> json
 app.post('/addUser', (req, res) => {
-    // console.log("post req send");
+    // console.log("post req send"); // it will show on vs code terminal
+    // console.log("data recieved", req.body);
+
     // save to database
     const user = req.body;
     user.id = 55;
